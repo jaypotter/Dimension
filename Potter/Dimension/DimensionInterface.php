@@ -2,6 +2,8 @@
 
 namespace Potter\Dimension;
 
+use Potter\Dimension\Name;
+
 interface DimensionInterface extends DimensionNameInterface
 {
     public function alter(): void;
