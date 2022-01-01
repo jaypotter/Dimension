@@ -2,7 +2,7 @@
 
 namespace Potter\Dimension;
 
-use Potter\Dimension\Name;
+use Potter\Dimension\Name\DimensionNameInterface;
 
 interface DimensionInterface extends DimensionNameInterface
 {

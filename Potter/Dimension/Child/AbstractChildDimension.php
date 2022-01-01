@@ -4,7 +4,6 @@ namespace Potter\Dimension\Child;
 
 use Potter\Dimension\{
     AbstractDimension,
-    Child\ChildDimensionInterface,
     Parent\ParentDimensionInterface
 };
 
