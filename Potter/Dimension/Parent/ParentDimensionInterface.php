@@ -13,7 +13,7 @@ interface ParentDimensionInterface extends DimensionInterface
 
     public function childExists(string $childName): bool;
 
-    public function createChild(ChildDimensionInterface $child);
+    public function createChild(ChildDimensionInterface $child): void;
 
     public function createChildIfNotExists(ChildDimensionInterface $child): void;
 
