@@ -6,7 +6,7 @@ use Potter\Dimension\Parent\ParentDimensionInterface;
 
 trait ChildDimensionTrait
 {
-    private ParentDimensionInterface $parent;
+    private ParentDimensionInterface $parentDimension;
 
     final public function alter(): void
     {
@@ -24,25 +24,25 @@ trait ChildDimensionTrait
     }
 
     final public function drop(): void{
-        $this->getParent()->createChild($this->getName());
+        $this->getParent()->dropChild($this->getName());
     }
 
     final public function exists(): bool
     {
-        $this->getParent()->childExists($this->getName());
+        return $this->getParent()->childExists($this->getName());
     }
 
     abstract public function getName(): string;
 
     final public function getParent(): ParentDimensionInterface
     {
-        return $this->parent;
+        return $this->parentDimension;
     }
 
     abstract public function getSelf(): ChildDimensionInterface;
 
     final public function setParent(ParentDimensionInterface $parentDimension): void
     {
-        $this->parent = $parent;
+        $this->parentDimension = $parentDimension;
     }
 }
